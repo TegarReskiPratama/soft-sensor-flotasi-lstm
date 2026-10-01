@@ -1,0 +1,89 @@
+{
+  "sumber": "edumagalhaes/quality-prediction-in-a-mining-process",
+  "target": "% Silica Concentrate",
+  "fitur": [
+    "Starch Flow",
+    "Amina Flow",
+    "Ore Pulp Flow",
+    "Ore Pulp pH",
+    "Ore Pulp Density",
+    "Flotation Column 01 Air Flow",
+    "Flotation Column 02 Air Flow",
+    "Flotation Column 03 Air Flow",
+    "Flotation Column 04 Air Flow",
+    "Flotation Column 05 Air Flow",
+    "Flotation Column 06 Air Flow",
+    "Flotation Column 07 Air Flow",
+    "Flotation Column 01 Level",
+    "Flotation Column 02 Level",
+    "Flotation Column 03 Level",
+    "Flotation Column 04 Level",
+    "Flotation Column 05 Level",
+    "Flotation Column 06 Level",
+    "Flotation Column 07 Level"
+  ],
+  "jam_input": 6,
+  "horizon_jam": 1,
+  "seed": 42,
+  "epoch_terlatih": 8,
+  "split": {
+    "train": {
+      "mulai": "2017-03-10 01:00:00",
+      "akhir": "2017-07-20 17:00:00",
+      "jumlah_jam": 2867,
+      "jumlah_jendela": 2855
+    },
+    "validasi": {
+      "mulai": "2017-07-20 18:00:00",
+      "akhir": "2017-08-15 08:00:00",
+      "jumlah_jam": 615,
+      "jumlah_jendela": 609
+    },
+    "test": {
+      "mulai": "2017-08-15 09:00:00",
+      "akhir": "2017-09-09 23:00:00",
+      "jumlah_jam": 615,
+      "jumlah_jendela": 609
+    }
+  },
+  "validasi": {
+    "lab_terakhir": {
+      "mae": 0.3946962058544159,
+      "rmse": 0.6523496890226003,
+      "r2": 0.6041285395622253,
+      "p90_galat_absolut": 1.087999939918518
+    },
+    "ridge": {
+      "mae": 0.830407977104187,
+      "rmse": 1.094423359271378,
+      "r2": -0.11420214176177979,
+      "p90_galat_absolut": 1.8018279075622559
+    },
+    "lstm": {
+      "mae": 0.8300373554229736,
+      "rmse": 1.0900513372668268,
+      "r2": -0.10531795024871826,
+      "p90_galat_absolut": 1.71345853805542
+    }
+  },
+  "test": {
+    "lab_terakhir": {
+      "mae": 0.4754515290260315,
+      "rmse": 0.7638306123486817,
+      "r2": 0.5952779054641724,
+      "p90_galat_absolut": 1.2160000801086426
+    },
+    "ridge": {
+      "mae": 1.042862892150879,
+      "rmse": 1.371108269682512,
+      "r2": -0.3040860891342163,
+      "p90_galat_absolut": 2.4150454998016357
+    },
+    "lstm": {
+      "mae": 1.0452353954315186,
+      "rmse": 1.372320338373844,
+      "r2": -0.3063926696777344,
+      "p90_galat_absolut": 2.451261520385742
+    }
+  }
+}
